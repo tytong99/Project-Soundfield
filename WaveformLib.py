@@ -17,15 +17,12 @@ Output parameters:
     'sig' as array of real singular pulsulated sine wave
 '''
 def pulsedSine_single(A,numCyc,dc,freq,sinePos,fs):
-    if sinePos >= dc:
-        print('Position of sine wave too close to tail, sinePos>=dc')
-    else:
-        lenSig = int(round(numCyc*fs / (dc*freq)))
-        startPos = int(round(sinePos*lenSig))
-        t = np.arange(0,numCyc/freq,1/fs)
-        sig = np.zeros(lenSig)        
-        sig[startPos : startPos+len(t)] = A * np.sin(2*np.pi*freq*t)
-        return (sig)
+    lenSig = int(round(numCyc*fs / (dc*freq)))
+    startPos = int(round(sinePos*lenSig))
+    t = np.arange(0,numCyc/freq,1/fs)
+    sig = np.zeros(lenSig)        
+    sig[startPos : startPos+len(t)] = A * np.sin(2*np.pi*freq*t)
+    return (sig)
 
 
 '''Analytical complex sinusoidal wave

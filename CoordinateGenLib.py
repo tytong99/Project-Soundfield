@@ -67,14 +67,46 @@ def lineVector(x0,y0,z0,i,j,k,pts):
         crd[i,:] = [x0+i*m,y0+j*m,z0+k+m]
     return (crd)
 
-'''Coordinate of a meshgrid plane from two linspance line segments
+'''Find intersection coordinate for two vectors known to have a crossing point
+https://blog.csdn.net/Mr_HCW/article/details/82856056
+'''
+def intersectPt(vec1,vec2):
+    dir1 = vec1[-1,:]-vec1[0,:]
+    dir2 = vec2[-1,:]-vec2[0,:]
+    d1 = vec1[1,:]-vec1[0,:]
+    d2 = vec2[1,:]-vec2[0,:]
+    A1B1 = vec2[0,:]-vec1[0,:]
+    A1B2 = vec2[-1,:]-vec1[0,:]
+    d1 = np.linalg.norm(np.cross(A1B1,dir1))/np.linalg.norm(dir1)
+    d2 = np.linalg.norm(np.cross(A1B2,dir1))/np.linalg.norm(dir1)
+    x = dir2*d1/(d1+d2)+vec2[0,:]   #crossing point
+    return (x)
+
+'''Coordinate of a meshgrid plane from two linspance vectors
 At the moment the two segments need to intersect with each other
 TB-Updated in the future (?)
+Algorithm:
+1. Find intersection point coordinate 
+Find orthogonal distance from the two ends of vector2 to vector1
+2. Find mid-point of the starting point of two vectors
+3. Construct plane using meshgrid & directional vectors,
+start from mirror point of intersection point to mid point of initial vectors
 '''
-def plane(line1,line2):
+def planeGrid(vec1,vec2):
+    m = vec1.shape[0]
+    n = vec2.shape[0]
+    pln = np.ndarray(shape=(m*n,3))
+    x = intersectPt(vec1,vec2)
+    s = vec1[0,:] + vec2[0,:] -x #starting point of the plane
+    d1 = vec1[1,:]-vec1[0,:]
+    d2 = vec2[1,:]-vec2[0,:]
+    for i in range(m):
+        for j in range(n):
+            pln[(i-1)*n+j,:]=s+i*d1+j*d2
+    return (pln)
 
-a =sphrRect(0.15,5,4,20,20,0,0)
+#a =sphrRect(0.15,5,4,20,20,0,0)
 
-ax = plt.axes(projection="3d")
-ax.scatter3D(a[:,0],a[:,1],a[:,2],color = 'green')
-io.savemat('test.mat',{'a':a})
+#ax = plt.axes(projection="3d")
+#ax.scatter3D(a[:,0],a[:,1],a[:,2],color = 'green')
+#io.savemat('test.mat',{'a':a})
