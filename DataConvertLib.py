@@ -10,7 +10,7 @@ from scipy import io
 '''Convert numpy array to .mat matrix
 File name needs to have .mat in it
 '''
-def matGen(arr,fileName)
+def matGen(arr,fileName):
     io.savemat(fileName,{'data':arr})
     return 0
     
