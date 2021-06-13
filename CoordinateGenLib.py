@@ -8,7 +8,13 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import pyplot as plt
 from scipy import io
 
-#%matplotlib qt
+'''Define a point in R3 space
+(Euclidean space / cartesian coordinate, however you call it)
+Wrap around a regular 1D list to 2D numpy array
+I wrote it like this just because I got addicted to Matlab
+'''
+def pt(x,y,z):
+    return (np.asarray([[x,y,z]]))
 
 '''Spherical coordinate (in degs) to cartesian coordinate translation
 '''
