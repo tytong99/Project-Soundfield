@@ -1,3 +1,5 @@
-# Acoustic-Array-Simulator-Project
-Well, just don't use this to cheat your beamformer homework plz, just, fucking, DONT.   Meanwhile, go and watch this youtube video https://www.youtube.com/watch?v=tylNqtyj0gs, tells you something about life.
-  And here, something very useful to this society. Let's all worry about it, https://en.wikipedia.org/wiki/Birch_and_Swinnerton-Dyer_conjecture.
+# Project soundfield: Acoustic-Array-Simulator-Project
+Wishing to establish a set of housekeeping cartesian coordinate definition & signal processing tools to achive simple & linear simulation of any acoustic array performance & algorithms, based on analytical signals & green function.
+Capabilities (hopefully one day) include: sound source & sound field & trans-ceiver coordinate definition, radiation & transmission definition, and final soundfield / received signal computation, for different types of arrays in acoustics (because I am no where near getting familiar with EM wave & antennas).
+
+Also, go watch this https://www.youtube.com/watch?v=09CeBwGbCeg
