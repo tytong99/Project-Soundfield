@@ -111,8 +111,19 @@ def planeGrid(vec1,vec2):
             pln[(i-1)*n+j,:]=s+i*d1+j*d2
     return (pln)
 
+'''Coordinate of points on a concave curve on x-y plane
+'''
+def concave(r,numPts,l):
+    crdTemp = np.zeros((numPts,3))
+    crdTemp[:,0] = r
+    crdTemp[:,1] = np.linspace(-np.arcsin(l/2/r),np.arcsin(l/2/r),num=numPts)
+    crdTemp[:,2] = np.deg2rad(90)
+    crd = sphr2Cart(crdTemp,'rad')
+    return (crd)
 #a =sphrRect(0.15,5,4,20,20,0,0)
 
 #ax = plt.axes(projection="3d")
 #ax.scatter3D(a[:,0],a[:,1],a[:,2],color = 'green')
 #io.savemat('test.mat',{'a':a})
+
+

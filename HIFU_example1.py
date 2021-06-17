@@ -8,9 +8,9 @@
 #=============================================================================
 
 import numpy as np
-import FieldCalcLib as fcl 
-import CoordinateGenLib as cgl 
-import WaveformLib as wl 
+from Project_Soundfield import FieldCalcLib as fcl 
+from Project_Soundfield import CoordinateGenLib as cgl 
+from Project_Soundfield import WaveformLib as wl 
 from scipy.signal import hilbert
 from matplotlib import pyplot as plt
 
@@ -31,7 +31,7 @@ propagation = fcl.fixedfGreen(dist, f, c0)
 propagation = np.sum(propagation,0) #linear transformation
 
 #Source signal
-source = hilbert(wl.pulsedSine_single(1, 5, 0.2, f, 0.2, fs))
+source = hilbert(wl.toneBurst(1, 5, 0.2, f, 0.2, fs))
 
 #Simulated Received Signal Matrix
 receivedSig = np.ndarray(shape=(len(propagation),len(source)),dtype=complex)

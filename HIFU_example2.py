@@ -9,9 +9,9 @@
 #=============================================================================
 
 import numpy as np
-import FieldCalcLib as fcl 
-import CoordinateGenLib as cgl 
-import WaveformLib as wl 
+from Project_Soundfield import FieldCalcLib as fcl 
+from Project_Soundfield import CoordinateGenLib as cgl 
+from Project_Soundfield import WaveformLib as wl 
 from scipy.signal import hilbert
 from matplotlib import pyplot as plt
 

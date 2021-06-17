@@ -10,9 +10,9 @@
 #=============================================================================
 
 import numpy as np
-import FieldCalcLib as fcl 
-import CoordinateGenLib as cgl 
-import WaveformLib as wl 
+from Project_Soundfield import FieldCalcLib as fcl 
+from Project_Soundfield import CoordinateGenLib as cgl 
+from Project_Soundfield import WaveformLib as wl 
 from scipy.signal import hilbert
 from matplotlib import pyplot as plt
 
@@ -25,7 +25,7 @@ stdNoise = 0.1  #Standard deviation of channel noise, normalised
 
 #Source coordinates & signal def
 srcCrd = cgl.pt(0.1,0.04,0.14)
-srcSig = hilbert(wl.pulsedSine_single(1, 5, 0.2, f, 0.2, fs))
+srcSig = hilbert(wl.toneBurst(1, 5, 0.2, f, 0.2, fs))
 
 #Receiver coordinates
 ulaCrd = cgl.lineOnAxis(l,n,'x')

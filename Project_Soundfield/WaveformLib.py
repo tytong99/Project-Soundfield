@@ -5,7 +5,7 @@
 import numpy as np
 
 
-'''Single frame of pulsulated sine wave (or cosine if you look from upside down)
+'''Single frame of pulsulated sine wave (or cosine if you have inverted eyes)
 Input parameters:
     'A' as amplitude
     'numCyc' as number of sine cycles
@@ -16,7 +16,7 @@ Input parameters:
 Output parameters:
     'sig' as array of real singular pulsulated sine wave
 '''
-def pulsedSine_single(A,numCyc,dc,freq,sinePos,fs):
+def toneBurst(A,numCyc,dc,freq,sinePos,fs):
     lenSig = int(round(numCyc*fs / (dc*freq)))
     startPos = int(round(sinePos*lenSig))
     t = np.arange(0,numCyc/freq,1/fs)
@@ -94,3 +94,49 @@ def agwn(dur,mean,std,fs):
     sig = np.random.normal(mean,std,dur*fs)
     sig = sig-sig.mean()
     return(sig)
+
+'''Bandwidth-limited broadband signal burst (band-defined sinc)
+A braodband time-series signal with a bandwidth limit, computed through IRFFT
+This is a high-quality signal given that the NFFT number equals signal length
+There shouldn't be any freq domain roll-down or gibb's...
+Input parameters:
+    'A' amplitude
+    'dur' duration of signal in [s]
+    'fs' sampling frequency
+    'fc' center frequency of bandwidth
+    'bandwidth' a bandwidth factor as factorial of Nyquist frequency,
+        0<bandwidth<1
+Output:
+    'sig' as the broadband sinc time series
+'''
+def bbSinc(A,dur,fs,fc,bandwidth):
+    nfft = int(round(dur*fs))
+    f=np.arange(0,fs/2+fs/nfft,fs/nfft) #create frequency vector
+    fcIndex = int(round(fc*nfft/fs))
+    binNum = int(round(bandwidth*nfft/4))
+    f[:] = 0
+    if (fcIndex-binNum<0):
+        lowBound = 0
+    else:
+        lowBound = fcIndex-binNum
+    if (fcIndex+binNum>len(f)-1):
+        upBound = len(f)-1
+    else:
+        upBound = fcIndex+binNum
+    f[lowBound:upBound] = 1
+    sig = np.roll(np.fft.irfft(f,nfft),int(round(nfft/2)))
+    sig = A*sig/np.max(sig)
+    return(sig)
+
+'''My personal implementation of chirp signal
+'''
+def chirp():
+    return(sig)
+
+'''A zero-padded chirp signal
+'''
+def chirpBurst():
+    return(sig)
+
+'''Rayleigh-Plesset bubble burst
+'''
