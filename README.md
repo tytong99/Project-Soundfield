@@ -1,11 +1,11 @@
 # Project soundfield: Acoustic-Array-Simulator-Project
->Aim of this thing:
->>Simple, quick, intuitive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
+><h2>Aim of this thing:</h2>
+>Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
 
 
->Generalised simulation procedure:
+><h2>Generalised simulation procedure:</h2>
 >
->1.
+>**1.**
 >
 >Define source geometry
 >
@@ -15,9 +15,9 @@
 >
 >Define radiation pattern
 >
->2.
+>**2.**
 >
->If(want to see soundfield):
+>**If(want to see soundfield):**
 >
 >>Define soundfield grid
 >>
@@ -25,14 +25,14 @@
 >>
 >>compute soundfield
 >
->If(want to see receiver array performance):
+>**If(want to see receiver array performance):**
 >>Define recipant geometry
 >>
->>If(direct transmission between transceivers):
+>>**If(direct transmission between transceivers):**
 >>
 >>>>sound transmission from source
 >>
->>If(receiver targets soundfield):
+>>**If(receiver targets soundfield):**
 >>
 >>>>soundfield (Huygen-Fresnel) to receiver
 >>>>
@@ -42,11 +42,11 @@
 >>>>
 >>>>compute receiver results
 >>>>
->3.
+>**3.**
 >
 >Physical quantity calibration
 >
->4.
+>**4.**
 >
 >Visualisation
 >
@@ -54,11 +54,11 @@
 
 >Datatype to process: Numpy ndarrays pretending to be matrices
 >
->Style: OPP (script kid)
+>Style: Naive OPP (script kid) with no checks
 >
 
 
->Physical principles:
+><h2>Physical principles:</h2>
 >
 >Green function: in other word, impulse response & linear
 >
