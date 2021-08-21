@@ -8,6 +8,8 @@
 #4. Find the ideal steering delays of point source - ULA array by reciprocity
 #5. Steer the ULA array and compare new received signal
 #=============================================================================
+import os, sys
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 import numpy as np
 from Project_Soundfield import FieldCalcLib as fcl 

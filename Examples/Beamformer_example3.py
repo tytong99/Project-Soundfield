@@ -2,6 +2,8 @@
 #Beamformer Example 3
 #Simple broadband beamforming
 #=============================================================================
+import os, sys
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 import numpy as np
 from Project_Soundfield import FieldCalcLib as fcl 

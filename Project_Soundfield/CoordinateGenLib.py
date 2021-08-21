@@ -3,10 +3,6 @@
 #Specialised in generating coordinate arrays that can be visualised w/ plot3d#
 #============================================================================#
 import numpy as np
-import matplotlib
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import pyplot as plt
-from scipy import io
 
 '''Define a point in R3 space
 (Euclidean space / cartesian coordinate, however you call it)
@@ -119,6 +115,7 @@ def concave(r,numPts,l):
     crdTemp[:,1] = np.linspace(-np.arcsin(l/2/r),np.arcsin(l/2/r),num=numPts)
     crdTemp[:,2] = np.deg2rad(90)
     crd = sphr2Cart(crdTemp,'rad')
+    crd[:,0] = crd[:,0]-np.max(crd[:,0])
     return (crd)
 #a =sphrRect(0.15,5,4,20,20,0,0)
 

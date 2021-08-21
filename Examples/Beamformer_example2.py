@@ -5,6 +5,8 @@
 #1. Gain function, both analytical & computed
 #2. Narrowband, plane wave steering
 #=============================================================================
+import os, sys
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 import numpy as np
 from Project_Soundfield import CoordinateGenLib as cgl 

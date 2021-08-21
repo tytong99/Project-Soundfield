@@ -1,0 +1,5 @@
+directivity of a rectangular radiator
+directivity of a spherical radiator
+geometry generation functions of focused-bowl arrays
+rodrigues rotation of a geometry along a vector
+...

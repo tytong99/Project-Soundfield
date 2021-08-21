@@ -8,6 +8,8 @@
 #techniques that has ever existed in acoustics in my personal opinion (hmmm I
 #wonder why hmmm...)
 #=============================================================================
+import os, sys
+sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 import numpy as np
 from Project_Soundfield import CoordinateGenLib as cgl 
