@@ -1,7 +1,12 @@
 # Project soundfield: Acoustic-Array-Simulator-Project
 ><h2>Aim of this thing:</h2>
 >Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
-
+<p align="center">
+![image](https://github.com/tytong99/Project-Soundfield/blob/main/img/focused_rectangle.PNG)![image](https://github.com/tytong99/Project-Soundfield/blob/main/img/beamformer_gain.PNG)
+</p>
+<p align="center">
+Visualisation of focused acoustic array soundfield and numerical simulation of beamformer directivity
+</p>
 
 ><h2>Generalised simulation procedure:</h2>
 >
@@ -73,3 +78,6 @@
 >Dirichlet boundary condition: simple point to point simulation, point doesn't move
 
 
+<p>
+If you think this project is a good idea, feel free to contribute and have a chat. My progress on building this project is typically extremely slow.
+</p>
