@@ -2,7 +2,7 @@
 ><h2>Aim of this thing:</h2>
 <p>
 Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
-<\p>
+</p>
 <p align="center">
   <img src="https://github.com/tytong99/Project-Soundfield/blob/main/img/focused_rectangle.PNG" width="350" title="Visualisation of focused acoustic array soundfield">
   <img src="https://github.com/tytong99/Project-Soundfield/blob/main/img/beamformer_gain.PNG" width="350" title="numerical simulation of beamformer directivity">
@@ -10,6 +10,7 @@ Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation
 <p align="center">
   Soundfield visualisation, beamformer directivity numerical simulation
 </p>
+
 ><h2>Generalised simulation procedure:</h2>
 >
 >**1.**
@@ -61,7 +62,7 @@ Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation
 
 >Datatype to process: Numpy ndarrays pretending to be matrices
 >
->Style: Naive OPP (script kid) with no checks
+>Style: Naive OPP (I'm a script kid and I'm arrogant about it) with no checks
 >
 
 
