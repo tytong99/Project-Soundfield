@@ -1,13 +1,15 @@
 # Project soundfield: Acoustic-Array-Simulator-Project
 ><h2>Aim of this thing:</h2>
->Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
+<p>
+Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array.
+<\p>
 <p align="center">
-![image](https://github.com/tytong99/Project-Soundfield/blob/main/img/focused_rectangle.PNG)![image](https://github.com/tytong99/Project-Soundfield/blob/main/img/beamformer_gain.PNG)
+  <img src="https://github.com/tytong99/Project-Soundfield/blob/main/img/focused_rectangle.PNG" width="350" title="Visualisation of focused acoustic array soundfield">
+  <img src="https://github.com/tytong99/Project-Soundfield/blob/main/img/beamformer_gain.PNG" width="350" title="numerical simulation of beamformer directivity">
 </p>
 <p align="center">
-Visualisation of focused acoustic array soundfield and numerical simulation of beamformer directivity
+  Soundfield visualisation, beamformer directivity numerical simulation
 </p>
-
 ><h2>Generalised simulation procedure:</h2>
 >
 >**1.**
