@@ -19,6 +19,22 @@ def distance(coord1,coord2):
                 +(coord1[i,1]-coord2[j,1])**2+(coord1[i,2]-coord2[j,2])**2)
     return (dist)
 
+
+'''Angle calculation for two SETS of points with respect to a third point 
+ptPivot
+Input parameters:
+    pt1, pt2, pt3: 
+'''
+def angle(pt1,pt2,ptPivot,mode):
+    a = pt1-ptPivot
+    b = pt2-ptPivot
+    theta = np.arccos(np.dot(a,b.T)/(np.linalg.norm(a) *\
+         np.linalg.norm(b)))
+    if mode == 'rad':
+        return(theta)
+    elif mode == 'deg':
+        return(np.rad2deg(theta))
+
 '''Freefield monopole green function wave propagation matrix, fixed frequency
 G = (e^-jkr/c0)/r
 Input parameters:
