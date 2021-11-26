@@ -82,5 +82,5 @@ Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation
 
 
 <p>
-If you think this project is a good idea, feel free to contribute and have a chat. My progress on building this project is typically extremely slow.
+If you think this project is a good idea, feel free to contribute and have a chat. My progress on building this project is typically extremely slow (I am recently drifting away from analytical solutions to numerical simulation).
 </p>
