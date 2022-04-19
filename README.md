@@ -1,7 +1,7 @@
 # Project soundfield: Acoustic-Array-Simulator-Project
 ><h2>Aim of this thing:</h2>
 <p>
-Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array numerical signal integration.
+Simple, quick, intuitive, naive, easy-to-use soundfield simulation/visualisation/algorithm prototyping in-house python package for any acoustic array numerical with signal integration.
 </p>
 <p align="center">
   
